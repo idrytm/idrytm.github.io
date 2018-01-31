@@ -1,0 +1,205 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: "Amatic SC"
+	font-size: 20px
+	text-decoration: none
+	color: #000
+	font-weight: 700
+	line-height: 1.5em
+
+.page-header
+	background-image: -webkit-linear-gradient(top, #f4f5f8 0%, #f1f5f6 34%, #eef1f4 68%, #ebeff2 100%)
+	&__container
+		display: flex
+		justify-content: space-between
+		width: 75%
+		margin: 0 auto
+		padding: 3% 2%
+		border-bottom: 2px solid #e0e3e6
+	&__logo
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 70px
+		height: 66px
+		background-color: #dd002d
+		span
+			color: #fff
+			font-size: 35px
+		sup
+			color: #fff
+			font-size: 20px
+	&__nav
+		display: flex
+		justify-content: space-between
+		width: 40%
+	&__nav-items
+		display: flex
+		flex-direction: column
+	&__nav-item
+		color: #dd002d
+		&:hover
+			text-decoration: underline
+	&__links-and-search
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-end
+
+.links a
+	color: #fff
+
+.search
+	display: flex
+	&__input
+		width: 150px
+		height: 35px
+		border: 1px solid #dfe1e3
+		outline: none
+		border-right: none
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 35px
+		height: 35px
+		border: 1px solid #dfe1e3
+		border-left: none
+		background: #fff
+		cursor: pointer
+		outline: none
+		&:before
+			content: "\f002"
+			font-family: FontAwesome
+			font-size: 17px
+			color: #dd002d
+		&:focus
+			opacity: 0.5
+
+.advantages
+	min-height: 480px
+	background-color: #eff2f5
+	border-bottom: 2px solid #e0e3e6	
+	&__container
+		display: flex
+		width: 75%
+		margin: 0 auto
+		padding: 3% 2%
+		justify-content: space-between
+	&__item
+		width: 21%
+	&__item-title
+		font-size: 30px
+	&__item-description
+		font-weight: 400
+
+.slider
+	min-height: 520px
+	border-bottom: 2px solid #e0e3e6
+	&__container
+		position: relative
+		display: flex
+		width: 75%
+		margin: 0 auto
+		padding: 3% 2%
+		flex-direction: column
+		align-items: center		
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 940px
+		list-style-type: none
+		background-image: -webkit-linear-gradient(top, #f4f5f7, #eff0f3)
+	&__list-item
+		width: 16.5%
+		height: 70px
+		font-size: 35px
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #e1003b
+		&--selected
+			justify-content: center
+			position: relative
+			color: #fff
+			background-image: -webkit-linear-gradient(top, #e40041, #d2001b)			
+			&:after		
+				position: absolute
+				content: ""
+				width: 0
+				height: 0
+				border-top: 20px solid #d2001b
+				border-left: 20px solid transparent
+				border-right: 20px solid transparent
+				top: 70px
+				left: calc(50% - 20px)
+		&--prev
+			background-image: -webkit-linear-gradient(top, #e5e7e9, #dfe1e3)
+		&--last
+			background: -webkit-linear-gradient(left, #dc0026 30%, #dfe1e3 55%)
+		    -webkit-background-clip: text
+		    -webkit-text-fill-color: transparent
+		&--first
+			background: -webkit-linear-gradient(right, #dc0026 30%, #dfe1e3 55%)
+		    -webkit-background-clip: text
+		    -webkit-text-fill-color: transparent
+	&__description
+		width: 940px
+		display: flex
+		align-items: center
+		border-bottom: 3px solid #d6d7d8
+	&__description-text
+		font-size: 40px
+		color: #93ceee
+	&__btn-prev
+		position: absolute
+		width: 50px
+		height: 50px
+		background-color: green
+		top: 50%
+		left: -5%
+	&__btn-next
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background-color: green;
+		top: 50%;
+		left: 100%;		
+
+/* это нужно поправить */
+
+.text-gray
+	font-weight: 400
+	color: grey
+
+.mail
+	display: flex
+	align-items: center
+	justify-content: center
+	position: fixed
+	right: 0
+	top: 250px
+	background-image: -webkit-linear-gradient(top, #e6e7e9, #dee1e3)
+	width: 55px
+	height: 45px
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.27)
+	&:before
+		content: "\f003"
+		font-family: FontAwesome
+		font-size: 30px
+		color: #69b7e0
+		animation-name: mailanimate
+		animation-duration: 1s
+		animation-iteration-count: infinite
+		animation-direction: alternate
+		cursor: pointer
+
+@keyframes mailanimate
+	0% 
+		opacity: 0.1
+
+	100% 
+		opacity: 1
