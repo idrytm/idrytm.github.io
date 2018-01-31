@@ -153,6 +153,7 @@
 }
 
 .slider__container {
+	position: relative;
 	display: flex;
 	width: 75%;
 	margin: 0 auto;
@@ -161,13 +162,91 @@
 	align-items: center;
 }
 
-.slider__nav {
+.slider__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 940px;
-	height: 70px;
-	
-	background-color: green;
+	list-style-type: none;
+	background-image: -webkit-linear-gradient(top, #f4f5f7, #eff0f3);
 }
 
+.slider__list-item {
+	width: 16.5%;
+	height: 70px;
+	font-size: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #e1003b;
+}
+
+.slider__list-item_selected {
+	justify-content: center;
+	position: relative;
+	color: #fff;
+	background-image: -webkit-linear-gradient(top, #e40041, #d2001b);
+}
+
+.slider__list-item_selected:after {
+
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 20px solid #d2001b;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	top: 70px;
+	left: calc(50% - 20px);
+}
+
+.slider__list-item_prev {
+	background-image: -webkit-linear-gradient(top, #e5e7e9, #dfe1e3);
+}
+
+.slider__list-item_last {
+	background: -webkit-linear-gradient(left, #dc0026 30%, #dfe1e3 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.slider__list-item_first {
+	background: -webkit-linear-gradient(right, #dc0026 30%, #dfe1e3 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slider__description {
+	width: 940px;
+	display: flex;
+	align-items: center;
+	border-bottom: 3px solid #d6d7d8;
+}
+
+.slider__description-text {
+	font-size: 40px;
+	color: #93ceee;
+}
+
+.slider__btn-prev {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: green;
+	top: 50%;
+	left: -5%;
+}
+
+.slider__btn-next {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: green;
+	top: 50%;
+	left: 105%;
+}
 /******************************* Mixins *****************************************/
 
 .text-grey {
